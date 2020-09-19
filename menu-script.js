@@ -1,6 +1,83 @@
 $(document).ready(function() {
 	$('.header_logo').click(function(event) {
-		$('.header_menu,.header_logo').toggleClass('active');
+		$('.header_menu,.header_logo,.pole_about.active, .pole_services.active, .pole_shares.active, .pole_universities.active, .pole_contacts.active,#about.active, #services.active, #shares.active, #universities.active, #contacts.active').toggleClass('active');
 	});
 });
+$(document).ready(function(){
+	$('#about').click(function(event){
+		$('.pole_about,#about').toggleClass('active');
+	});
+});
+$(document).ready(function(){
+	$('#services').click(function(event){
+		$('.pole_services,#services').toggleClass('active');
+	});
+});
+$(document).ready(function(){
+	$('#shares').click(function(event){
+		$('.pole_shares,#shares').toggleClass('active');
+	});
+});
+$(document).ready(function(){
+	$('#universities').click(function(event){
+		$('.pole_universities,#universities').toggleClass('active');
+	});
+});
+$(document).ready(function(){
+	$('#contacts').click(function(event){
+		$('.pole_contacts,#contacts').toggleClass('active');
+	});
+});
+$(document).ready(function(){
+	$("#about").click(function(event){
+  		$(".pole_services,.pole_shares,.pole_universities,.pole_contacts").removeClass('active');
+	});
+});
+$(document).ready(function(){
+	$("#services").click(function(event){
+  		$(".pole_about,.pole_shares,.pole_universities,.pole_contacts").removeClass('active');
+	});
+});
+$(document).ready(function(){
+	$("#shares").click(function(event){
+  		$(".pole_about,.pole_services,.pole_universities,.pole_contacts").removeClass('active');
+	});
+});
+$(document).ready(function(){
+	$("#universities").click(function(event){
+  		$(".pole_about,.pole_services,.pole_shares,.pole_contacts").removeClass('active');
+	});
+});
+$(document).ready(function(){
+	$("#contacts").click(function(event){
+  		$(".pole_about,.pole_services,.pole_shares,.pole_universities").removeClass('active');
+	});
+});	
 
+
+
+$(document).ready(function(){
+	$("#about").click(function(event){
+  		$("#services,#shares,#universities,#contacts").removeClass('active');
+	});
+});
+$(document).ready(function(){
+	$("#services").click(function(event){
+  		$("#about,#shares,#universities,#contacts").removeClass('active');
+	});
+});
+$(document).ready(function(){
+	$("#shares").click(function(event){
+  		$("#about,#services,#universities,#contacts").removeClass('active');
+	});
+});
+$(document).ready(function(){
+	$("#universities").click(function(event){
+  		$("#about,#services,#shares,#contacts").removeClass('active');
+	});
+});
+$(document).ready(function(){
+	$("#contacts").click(function(event){
+  		$("#about,#services,#shares,#universities").removeClass('active');
+	});
+});	
